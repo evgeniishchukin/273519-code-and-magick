@@ -20,14 +20,14 @@ window.renderStatistics = function (ctx, names, times) {
   ctx.font = '16px PT Mono';
   ctx.textBaseline = 'hanging';
 
-  var textWin = ['Ура вы победили!', 'Список результатов:']
+  var textWin = ['Ура вы победили!', 'Список результатов:'];
   for (var i = 0, j = 30; i < textWin.length; i++, j += 30) {
     ctx.fillText(textWin[i], 200, j);
   }
 
   var max = -1;
 
-  for(var i = 0 ; i < times.length; i++ ) {
+  for (var i = 0; i < times.length; i++) {
     var time = times[i];
     if (time > max) {
       max = time;
