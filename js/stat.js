@@ -27,7 +27,7 @@ window.renderStatistics = function (ctx, names, times) {
 
   var max = -1;
 
-  for (var i = 0; i < times.length; i++) {
+  for (i = 0; i < times.length; i++) {
     var time = times[i];
     if (time > max) {
       max = time;
@@ -38,8 +38,8 @@ window.renderStatistics = function (ctx, names, times) {
  var histoX = 150;
  var step = histoHeight / max;
  var columnIndent = 90;
-
- for (var i = 0; i < times.length; i++) {
+  
+ for (i = 0; i < times.length; i++) {
    var height = step * times[i];
 
    ctx.fillStyle = '#000000';
