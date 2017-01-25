@@ -34,12 +34,12 @@ window.renderStatistics = function (ctx, names, times) {
     }
   }
 
- var histoHeight = 150;
- var histoX = 150;
- var step = histoHeight / max;
- var columnIndent = 90;
+  var histoHeight = 150;
+  var histoX = 150;
+  var step = histoHeight / max;
+  var columnIndent = 90;
   
- for (i = 0; i < times.length; i++) {
+  for (i = 0; i < times.length; i++) {
    var height = step * times[i];
 
    ctx.fillStyle = '#000000';
@@ -58,5 +58,5 @@ window.renderStatistics = function (ctx, names, times) {
 
    ctx.fillStyle = '#000000';
    ctx.fillText(names[i], histoX + columnIndent * i, 110 + histoHeight);
- }
+  }
 };
