@@ -40,23 +40,23 @@ window.renderStatistics = function (ctx, names, times) {
   var columnIndent = 90;
   
   for (i = 0; i < times.length; i++) {
-   var height = step * times[i];
+    var height = step * times[i];
 
-   ctx.fillStyle = '#000000';
-   ctx.fillText(times[i].toFixed(0), histoX + columnIndent * i, 90 + histoHeight - height);
+    ctx.fillStyle = '#000000';
+    ctx.fillText(times[i].toFixed(0), histoX + columnIndent * i, 90 + histoHeight - height);
 
-   var transparency = Math.random().toFixed(1);
-   var saturation = (Math.random() * 255).toFixed(0);
+    var transparency = Math.random().toFixed(1);
+    var saturation = (Math.random() * 255).toFixed(0);
 
-   ctx.fillStyle = ['rgba(0, 0, ' + saturation + ',' + transparency + ')'];
+    ctx.fillStyle = ['rgba(0, 0, ' + saturation + ',' + transparency + ')'];
 
-   if (names[i] === 'Вы') {
-     ctx.fillStyle = 'rgba(255, 0, 0, 1)';
-   }
+    if (names[i] === 'Вы') {
+      ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+    }
 
-   ctx.fillRect(histoX + columnIndent * i, 105 + histoHeight, 40, -height);
+    ctx.fillRect(histoX + columnIndent * i, 105 + histoHeight, 40, -height);
 
-   ctx.fillStyle = '#000000';
-   ctx.fillText(names[i], histoX + columnIndent * i, 110 + histoHeight);
+    ctx.fillStyle = '#000000';
+    ctx.fillText(names[i], histoX + columnIndent * i, 110 + histoHeight);
   }
 };
