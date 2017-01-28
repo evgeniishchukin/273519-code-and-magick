@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 //Открытие и закрытие окна настройки персонажа
 var setup = document.querySelector('.setup');
@@ -9,14 +9,13 @@ setupOpen.addEventListener('click', function () {
   setup.classList.remove('invisible');
 });
 
-setupClose.addEventListener('click', function() {
+setupClose.addEventListener('click', function () {
   setup.classList.add('invisible');
 });
 
 //Настройка цвета мантии персонажа
-// При нажатии на кофту мага, меняется ее цвет.
-// Цвет идет в порядке значений массива.
-var wizard = document.querySelector('#wizard');
+//При нажатии на кофту мага, меняется ее цвет.
+//Цвет идет в порядке значений массива.
 var wizardCoat = document.querySelector('#wizard-coat');
 var wizardCoatColors = [
   'rgb(101, 137, 164)',
@@ -30,7 +29,9 @@ var wizardCoatColor = 0;
 
 wizardCoat.addEventListener('click', function () {
   wizardCoatColor++;
-  if (wizardCoatColor >= wizardCoatColors.length) wizardCoatColor = 0;
+  if (wizardCoatColor >= wizardCoatColors.length) {
+    wizardCoatColor = 0;
+  }
   wizardCoat.style.fill = wizardCoatColors[wizardCoatColor];
 });
 
@@ -49,7 +50,9 @@ var wizardEyesColor = 0;
 
 wizardEyes.addEventListener('click', function () {
   wizardEyesColor++;
-  if (wizardEyesColor >= wizardEyesColors.length) wizardEyesColor = 0;
+  if (wizardEyesColor >= wizardEyesColors.length) {
+    wizardEyesColor = 0;
+  }
   wizardEyes.style.fill = wizardEyesColors[wizardEyesColor];
 });
 
