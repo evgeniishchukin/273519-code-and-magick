@@ -1,6 +1,6 @@
 'use strict';
 
-//Открытие и закрытие окна настройки персонажа
+// Открытие и закрытие окна настройки персонажа
 var setup = document.querySelector('.setup');
 var setupOpen = document.querySelector('.setup-open');
 var setupClose = setup.querySelector('.setup-close');
@@ -13,9 +13,9 @@ setupClose.addEventListener('click', function () {
   setup.classList.add('invisible');
 });
 
-//Настройка цвета мантии персонажа
-//При нажатии на кофту мага, меняется ее цвет.
-//Цвет идет в порядке значений массива.
+// Настройка цвета мантии персонажа
+// При нажатии на кофту мага, меняется ее цвет.
+// Цвет идет в порядке значений массива.
 var wizardCoat = document.querySelector('#wizard-coat');
 var wizardCoatColors = [
   'rgb(101, 137, 164)',
@@ -68,7 +68,7 @@ var fireballColors = [
   '#e6e848'
 ];
 
-fireball.addEventListener('click', function() {
+fireball.addEventListener('click', function () {
   var fireballColor = Math.floor(Math.random() * fireballColors.length);
 
   fireball.style.backgroundColor = fireballColors[fireballColor];
