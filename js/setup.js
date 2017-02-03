@@ -105,7 +105,7 @@ fireball.addEventListener('click', function () {
 // Перечень функций.
 var isActivateElement = function (event) {
   return event.keyCode && event.keyCode === ENTER_KEY_CODE;
-}ж
+};
 
 var setupKeyDownHandler = function (event) {
   if (event.keyCode === ESCAPE_KEY_CODE) {
