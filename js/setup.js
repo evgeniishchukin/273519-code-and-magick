@@ -105,7 +105,7 @@ fireball.addEventListener('click', function () {
 // Перечень функций.
 var isActivateElement = function (event) {
   return event.keyCode && event.keyCode === ENTER_KEY_CODE;
-}
+}ж
 
 var setupKeyDownHandler = function (event) {
   if (event.keyCode === ESCAPE_KEY_CODE) {
@@ -113,13 +113,13 @@ var setupKeyDownHandler = function (event) {
   }
 };
 
-var showSetupElement = function() {
+var showSetupElement = function () {
   setup.classList.remove('invisible');
 
   document.addEventListener('keydown', setupKeyDownHandler);
 };
 
-var hideSetupElement = function() {
+var hideSetupElement = function () {
   setup.classList.add('invisible');
 
   document.removeEventListener('keydown', setupKeyDownHandler);
