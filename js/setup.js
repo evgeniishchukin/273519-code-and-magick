@@ -9,39 +9,37 @@ var saveSetup = setup.querySelector('.setup-submit');
 var ENTER_KEY_CODE = 13;
 var ESCAPE_KEY_CODE = 27;
 
-setupOpen.addEventListener('click', function() {
-  showSetupElement ();
+setupOpen.addEventListener('click', function () {
+  showSetupElement();
 });
 
-setupOpen.addEventListener('keydown', function(event) {
-  if (isActivateElement (event)) {
-    showSetupElement ();
+setupOpen.addEventListener('keydown', function (event) {
+  if (isActivateElement(event)) {
+    showSetupElement();
   }
 });
 
-setupClose.addEventListener('click', function() {
-  hideSetupElement ();
+setupClose.addEventListener('click', function () {
+  hideSetupElement();
 });
 
-setupClose.addEventListener('keydown', function(event) {
-  if (isActivateElement (event)) {
-    hideSetupElement ();
+setupClose.addEventListener('keydown', function (event) {
+  if (isActivateElement(event)) {
+    hideSetupElement();
   }
 });
 
-saveSetup.addEventListener('click', function() {
+saveSetup.addEventListener('click', function () {
   event.preventDefault();
-  hideSetupElement ();
+  hideSetupElement();
 });
 
-saveSetup.addEventListener('keydown', function(event) {
-  if (isActivateElement (event)) {
+saveSetup.addEventListener('keydown', function (event) {
+  if (isActivateElement(event)) {
     event.preventDefault();
-    hideSetupElement ();
+    hideSetupElement();
   }
 });
-
-
 
 // Настройка цвета мантии персонажа
 // При нажатии на кофту мага, меняется ее цвет.
@@ -105,7 +103,7 @@ fireball.addEventListener('click', function () {
 });
 
 // Перечень функций.
-var isActivateElement = function(event) {
+var isActivateElement = function (event) {
   return event.keyCode && event.keyCode === ENTER_KEY_CODE;
 }
 
@@ -113,16 +111,16 @@ var setupKeyDownHandler = function (event) {
   if (event.keyCode === ESCAPE_KEY_CODE) {
     setup.classList.add('invisible');
   }
-}
+};
 
 var showSetupElement = function() {
   setup.classList.remove('invisible');
 
   document.addEventListener('keydown', setupKeyDownHandler);
-}
+};
 
 var hideSetupElement = function() {
   setup.classList.add('invisible');
 
   document.removeEventListener('keydown', setupKeyDownHandler);
-}
+};
