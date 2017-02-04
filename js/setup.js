@@ -115,12 +115,14 @@ var setupKeyDownHandler = function (event) {
 
 var showSetupElement = function () {
   setup.classList.remove('invisible');
-
   document.addEventListener('keydown', setupKeyDownHandler);
+  setupOpen.setAttribute('aria-pressed', true);
+  setupClose.setAttribute('aria-pressed', false);
 };
 
 var hideSetupElement = function () {
   setup.classList.add('invisible');
-
   document.removeEventListener('keydown', setupKeyDownHandler);
+  setupOpen.setAttribute('aria-pressed', false);
+  setupClose.setAttribute('aria-pressed', true);
 };
