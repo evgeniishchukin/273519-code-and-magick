@@ -64,14 +64,14 @@ function setupKeyDownHandler(event) {
   if (event.keyCode === ESCAPE_KEY_CODE) {
     setup.classList.add('invisible');
   }
-};
+}
 
 function showSetupElement() {
   setup.classList.remove('invisible');
   document.addEventListener('keydown', setupKeyDownHandler);
   setupOpen.setAttribute('aria-pressed', true);
   setupClose.setAttribute('aria-pressed', false);
-};
+}
 
 function hideSetupElement() {
   event.preventDefault();
@@ -79,4 +79,4 @@ function hideSetupElement() {
   document.removeEventListener('keydown', setupKeyDownHandler);
   setupOpen.setAttribute('aria-pressed', false);
   setupClose.setAttribute('aria-pressed', true);
-};
+}
