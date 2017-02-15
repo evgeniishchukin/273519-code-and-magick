@@ -25,10 +25,8 @@ window.colorize = (function () {
         }
       });
     }
-  }
+  };
 })();
-
-
 
 //
 // window.colorizeElement = function (element, colors, property) {

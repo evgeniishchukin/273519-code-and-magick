@@ -13,5 +13,5 @@ window.utils = (function () {
       } while (newValue === value);
       return newValue;
     }
-  }
+  };
 })();
